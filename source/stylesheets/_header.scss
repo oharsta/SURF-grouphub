@@ -1,0 +1,18 @@
+header {
+  @include clearFix;
+
+  ul:first-child {
+    float: left;
+  }
+  ul:last-child {
+    float: right;
+    li:last-child {
+      position: relative;
+      i {
+        position: absolute;
+        left: 22px;
+        top: 0;
+      }
+    }
+  }
+}
