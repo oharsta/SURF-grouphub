@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300");
 
+*, :after, :before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans";
   font-weight: 400;
@@ -7,16 +11,26 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.purple {
+.background_purple {
   background-color: $purple;
 }
 
-.green {
+.background_green {
   background-color: $green;
-
 }
 
-.blue {
+.background_blue {
   background-color: $blue;
+}
 
+.white {
+  color: white;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
 }

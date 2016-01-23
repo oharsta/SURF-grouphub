@@ -1,0 +1,29 @@
+.group {
+  width: 100%;
+  background-color: white;
+  border: 2px solid;
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+
+  section:first-child {
+    position: relative;
+    text-align: center;
+    color: white;
+    a {
+      text-decoration: none;
+      position: absolute;
+      color: white;
+    }
+    .close {
+      top: 0;
+      left: 0;
+    }
+    .sort {
+      top: 0;
+      right: 0;
+    }
+  }
+}
+

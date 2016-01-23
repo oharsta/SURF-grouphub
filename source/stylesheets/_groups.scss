@@ -1,0 +1,9 @@
+.groups {
+
+  @media screen and (min-width: $medium) {
+    display: flex;
+    align-items: stretch;
+  }
+  background-color: black;
+  padding: 0 5px;
+}

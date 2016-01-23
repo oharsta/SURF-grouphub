@@ -1,0 +1,67 @@
+.button_blue {
+  background: $blue;
+  padding: 7px 15px;
+  border-radius: $br;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin-right: 7px;
+
+  &:hover {
+    background: darken($blue, 10);
+    text-decoration: none;
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
+}
+
+.button_grey {
+  @extend .button_blue;
+  color: $dark-grey;
+  background-color: $light-grey;
+
+  &:hover {
+    background: darken($light-grey,10)
+  }
+}
+
+.button_grey_info {
+  @extend .button_grey;
+
+  padding-left: 40px;
+
+  span {
+    position: absolute;
+    color: white;
+    background-color: $grey;
+    padding: 7px 12px;
+    top: 0;
+    left: 0;
+    border-radius: $br;
+  }
+}
+
+.button_green {
+  @extend .button_blue;
+  color: white;
+  background-color: $green;
+
+  &:hover {
+    background: darken($green,10)
+  }
+}
+
+.button_red {
+  @extend .button_blue;
+  color: white;
+  background-color: $red;
+
+  &:hover {
+    background: darken($red,10)
+  }
+}

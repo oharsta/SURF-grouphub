@@ -2,51 +2,12 @@
 title:
 ---
 
-<header>
-  <ul>
-    <li>GroupHUB</li>
-    <li>Surfnet</li>
-  </ul>
+<%= partial "header" %>
+<%= partial "navigation" %>
+<div class="groups">
 
-  <ul>
-    <li><i class="fa fa-plus-circle"></i>New Group</li>
-    <li><span>5</span>Notifcations</li>
-    <li>Info</li>
-    <li>EN<i class="fa fa-sort-down"></i></li>
-  </ul>
-</header>
-<nav>
-  <ul>
-    <% { my_groups: "blue", organisation_groups: "green", all_groups: "purple" }.each do |key, value| %>
-        <li>Count <%= key %></li>
-        <li>Count <%= value %></li>
-        <li><%= I18n.t("nav_#{key}") %></li>
-    <% end %>
-  </ul>
-
-  <ul>
-    <li>
-      <input id="my_groups" type="checkbox" selected/>
-      <label class="blue" for="my_groups"><span><i class="fa fa-check"></i></span></label>
-      <label for="my_groups">My Groups</label>
-    </li>
-    <li>
-      <input id="organisation_groups" type="checkbox" selected/>
-      <label class="green" for="organisation_groups"><span><i class="fa fa-check"></i></span></label>
-      <label for="organisation_groups">Organisation Groups</label>
-    </li>
-    <li>
-      <input id="all_groups" type="checkbox" selected/>
-      <label class="purple" for="all_groups"><span><i class="fa fa-check"></i></span></label>
-      <label for="all_groups">All Groups</label>
-    </li>
-  </ul>
-  <div class="search_container">
-    <i className="fa fa-search"></i>
-    <input placeholder="Search..." type="text"/>
-  </div>
-</nav>
-
-<div class="groups_container">
+  <% {my_groups: "blue", organisation_groups: "green", all_groups: "purple"}.each do |key, value| %>
+      <%= partial(:group, locals: {group: key, type: value, owned: key == "my_groups"}) %>
+  <% end %>
 
 </div>
