@@ -1,5 +1,6 @@
 ---
 en:
-  nav_my_groups: "My Groups"
-  nav_organisation_groups: "Organisation Groups"
-  nav_all_groups: "All Groups"
+  nav:
+    my_groups: "My Groups"
+    organisation_groups: "Organisation Groups"
+    all_groups: "All Groups"
