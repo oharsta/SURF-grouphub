@@ -13,7 +13,7 @@ bundle install --path vendor/bundle
 bundle exec middleman
 ```
 
-To build a new version
+To build a new version and deploy to [github.io](http://oharsta.github.io/SURF-grouphub/build/)
 
 ```bash
 git checkout gh-pages
