@@ -6,13 +6,13 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Grouphub</title>
+    <title>SURF - Grouphub</title>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <link href="stylesheets/site-81bd34cf.css" rel="stylesheet" />
-    <script src="javascripts/all-cc830994.js"></script>
+    <link href="stylesheets/site-bdb23ed6.css" rel="stylesheet" />
+    <script src="javascripts/all-29a66be8.js"></script>
   </head>
 
   <body class="index">
@@ -32,134 +32,1162 @@
 <nav>
   <ul>
         <li>
-          <input id="my_groups" type="checkbox" checked/>
-          <label class="background_blue" for="my_groups"><span><i class="fa fa-check"></i></span></label>
-          <label class="white" for="my_groups">My Groups</label>
+          <input id="select_my_groups" type="checkbox" checked/>
+          <label class="background_blue" for="select_my_groups"><span><i class="fa fa-check"></i></span></label>
+          <label class="white" for="select_my_groups">My groups</label>
         </li>
         <li>
-          <input id="organisation_groups" type="checkbox" checked/>
-          <label class="background_green" for="organisation_groups"><span><i class="fa fa-check"></i></span></label>
-          <label class="white" for="organisation_groups">Organisation Groups</label>
+          <input id="select_organisation_groups" type="checkbox" checked/>
+          <label class="background_green" for="select_organisation_groups"><span><i class="fa fa-check"></i></span></label>
+          <label class="white" for="select_organisation_groups">Organisation groups</label>
         </li>
         <li>
-          <input id="all_groups" type="checkbox" checked/>
-          <label class="background_purple" for="all_groups"><span><i class="fa fa-check"></i></span></label>
-          <label class="white" for="all_groups">All Groups</label>
+          <input id="select_all_groups" type="checkbox" checked/>
+          <label class="background_purple" for="select_all_groups"><span><i class="fa fa-check"></i></span></label>
+          <label class="white" for="select_all_groups">All groups</label>
         </li>
   </ul>
   <div class="search_container">
     <div class="input_container">
       <i class="fa fa-search"></i>
-      <input placeholder="Search..." type="text"/>
+      <input id="searchInput" placeholder="Search..." type="text"/>
     </div>
   </div>
 </nav>
 
 <div class="groups">
 
-      <div class="group">
+      <div id="group_my_groups" class="group ">
   <section class="background_blue">
-    <a href="#" class="close"><i class="fa fa-times"></i></a>
-    <a href="#" class="sort">
-      <i class="fa fa-sort-amount-asc"></i>
+    <a id="close_my_groups" href="#" class="close"><i class="fa fa-times"></i></a>
+    <div class="sort">
+      <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
       <span>A-Z</span>
-      <i class="fa fa-sort-down"></i>
-    </a>
+      <span class="sort_container">
+        <a id="sort_menu_blue" href="#"><i class="fa fa-sort-down"></i></a>
+      </span>
+    </div>
+    <div id="sort_drop_down_blue" class="sort_drop_down_blue">
+      <ul>
+        <li><a href="#" class="active">Title</a></li>
+        <li><a href="#">Description</a></li>
+        <li><a href="#">Date</a></li>
+      </ul>
+    </div>
     <div>
-      <h1>MY GROUPS</h1>
+      <h3>MY GROUPS</h3>
       <p>You own or are a member of the group</p>
     </div>
   </section>
-  <section>
-    <i class="fa fa-angle-down"></i>
-    <h2>Owner</h2>
-  </section>
-  <ul>
-    <li>
-      <div>
-        <i class="fa fa-user"></i>
-        <span>12</span>
-      </div>
-      <div>
-        <h3>Data Management Landscape</h3>
-        <p>Temporibus autem quibusdam et aut.</p>
-        <span>15 December 2015</span>
-      </div>
-      <div>
-        <a class="button_green" href="#">Member</a>
-      </div>
-    </li>
-  </ul>
-</div>
-      <div class="group">
-  <section class="background_green">
-    <a href="#" class="close"><i class="fa fa-times"></i></a>
-    <a href="#" class="sort">
-      <i class="fa fa-sort-amount-asc"></i>
-      <span>A-Z</span>
-      <i class="fa fa-sort-down"></i>
-    </a>
-    <div>
-      <h1>MY GROUPS</h1>
-      <p>You own or are a member of the group</p>
-    </div>
-  </section>
-  <section>
-    <i class="fa fa-angle-down"></i>
-    <h2>Owner</h2>
-  </section>
-  <ul>
-    <li>
-      <div>
-        <i class="fa fa-user"></i>
-        <span>12</span>
-      </div>
-      <div>
-        <h3>Data Management Landscape</h3>
-        <p>Temporibus autem quibusdam et aut.</p>
-        <span>15 December 2015</span>
-      </div>
-      <div>
-        <a class="button_green" href="#">Member</a>
-      </div>
-    </li>
-  </ul>
-</div>
-      <div class="group">
-  <section class="background_purple">
-    <a href="#" class="close"><i class="fa fa-times"></i></a>
-    <a href="#" class="sort">
-      <i class="fa fa-sort-amount-asc"></i>
-      <span>A-Z</span>
-      <i class="fa fa-sort-down"></i>
-    </a>
-    <div>
-      <h1>MY GROUPS</h1>
-      <p>You own or are a member of the group</p>
-    </div>
-  </section>
-  <section>
-    <i class="fa fa-angle-down"></i>
-    <h2>Owner</h2>
-  </section>
-  <ul>
-    <li>
-      <div>
-        <i class="fa fa-user"></i>
-        <span>12</span>
-      </div>
-      <div>
-        <h3>Data Management Landscape</h3>
-        <p>Temporibus autem quibusdam et aut.</p>
-        <span>15 December 2015</span>
-      </div>
-      <div>
-        <a class="button_green" href="#">Member</a>
-      </div>
-    </li>
-  </ul>
-</div>
+      <section class="owned">
+        <i class="fa fa-angle-down"></i>
+        <h3>Owner</h3>
+      </section>
+      <ul>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user blue"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_edit" href="#" data-hover="LEAVE"><span>EDIT</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user blue"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_edit" href="#" data-hover="LEAVE"><span>EDIT</span></a>
+  </div>
+</li>
+      </ul>
+
+      <section class="owned">
+        <i class="fa fa-angle-down"></i>
+        <h3>Administrator</h3>
+      </section>
+      <ul>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user blue"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_edit" href="#" data-hover="LEAVE"><span>EDIT</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user blue"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_edit" href="#" data-hover="LEAVE"><span>EDIT</span></a>
+  </div>
+</li>
+      </ul>
+
+      <section class="owned">
+        <i class="fa fa-angle-down"></i>
+        <h3>Member</h3>
+      </section>
+      <ul>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user blue"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_member" href="#" data-hover="LEAVE"><span>MEMBER</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user blue"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_member" href="#" data-hover="LEAVE"><span>MEMBER</span></a>
+  </div>
+</li>
+      </ul>
 
 </div>
+      <div id="group_organisation_groups" class="group ">
+  <section class="background_green">
+    <a id="close_organisation_groups" href="#" class="close"><i class="fa fa-times"></i></a>
+    <div class="sort">
+      <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+      <span>A-Z</span>
+      <span class="sort_container">
+        <a id="sort_menu_green" href="#"><i class="fa fa-sort-down"></i></a>
+      </span>
+    </div>
+    <div id="sort_drop_down_green" class="sort_drop_down_green">
+      <ul>
+        <li><a href="#" class="active">Title</a></li>
+        <li><a href="#">Description</a></li>
+        <li><a href="#">Date</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>ORGANISATION GROUPS</h3>
+      <p>You are a member of these groups</p>
+    </div>
+  </section>
+
+
+      <ul>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user green"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_member" href="#" data-hover="LEAVE"><span>MEMBER</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user green"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_member" href="#" data-hover="LEAVE"><span>MEMBER</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user green"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_member" href="#" data-hover="LEAVE"><span>MEMBER</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user green"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_member" href="#" data-hover="LEAVE"><span>MEMBER</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user green"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_member" href="#" data-hover="LEAVE"><span>MEMBER</span></a>
+  </div>
+</li>
+      </ul>
+
+</div>
+      <div id="group_all_groups" class="group ">
+  <section class="background_purple">
+    <a id="close_all_groups" href="#" class="close"><i class="fa fa-times"></i></a>
+    <div class="sort">
+      <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+      <span>A-Z</span>
+      <span class="sort_container">
+        <a id="sort_menu_purple" href="#"><i class="fa fa-sort-down"></i></a>
+      </span>
+    </div>
+    <div id="sort_drop_down_purple" class="sort_drop_down_purple">
+      <ul>
+        <li><a href="#" class="active">Title</a></li>
+        <li><a href="#">Description</a></li>
+        <li><a href="#">Date</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>ALL GROUPS</h3>
+      <p>There is a total of 213 groups</p>
+    </div>
+  </section>
+
+
+      <ul>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user purple"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+      </ul>
+
+</div>
+
+  <div id="group_search" class="group hidden">
+  <section class="background_grey">
+    <a id="close_search" href="#" class="close"><i class="fa fa-times"></i></a>
+    <div class="sort">
+      <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+      <span>A-Z</span>
+      <span class="sort_container">
+        <a id="sort_menu_grey" href="#"><i class="fa fa-sort-down"></i></a>
+      </span>
+    </div>
+    <div id="sort_drop_down_grey" class="sort_drop_down_grey">
+      <ul>
+        <li><a href="#" class="active">Title</a></li>
+        <li><a href="#">Description</a></li>
+        <li><a href="#">Date</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>SEARCH</h3>
+      <p>Results for data</p>
+    </div>
+  </section>
+
+
+      <ul>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+            <li class="group_section">
+  <div>
+    <i class="fa fa-user grey"></i>
+    <span>12</span>
+  </div>
+  <div>
+    <p>Data Management Landscape</p>
+    <p>Temporibus autem quibusdam et aut.</p>
+    <p>15 December 2015</p>
+  </div>
+  <div>
+    <a class="button_join" href="#" data-hover="LEAVE"><span>JOIN</span></a>
+  </div>
+</li>
+      </ul>
+
+</div>
+</div>
+<footer>
+  <ul>
+    <li><a href="#">SURFnet</a></li>
+    <li><a href="#">Terms & conditions</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
+
+</footer>
   </body>
 </html>

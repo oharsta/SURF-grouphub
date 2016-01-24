@@ -365,27 +365,51 @@ body {
   background-color: #8e5290; }
 
 /* line 18, _base.scss */
+.background_grey {
+  background-color: #bbbbbb; }
+
+/* line 22, _base.scss */
 .background_green {
   background-color: #548c5b; }
 
-/* line 22, _base.scss */
+/* line 26, _base.scss */
 .background_blue {
   background-color: #52b2cd; }
 
-/* line 26, _base.scss */
+/* line 30, _base.scss */
 .white {
   color: white; }
 
-/* line 30, _base.scss */
+/* line 34, _base.scss */
+.blue {
+  color: #52b2cd; }
+
+/* line 38, _base.scss */
+.green {
+  color: #548c5b; }
+
+/* line 42, _base.scss */
+.purple {
+  color: #8e5290; }
+
+/* line 46, _base.scss */
+.grey {
+  color: #bbbbbb; }
+
+/* line 50, _base.scss */
 .pull-left {
   float: left; }
 
-/* line 34, _base.scss */
+/* line 54, _base.scss */
 .pull-right {
   float: right; }
 
+/* line 58, _base.scss */
+.hidden {
+  display: none; }
+
 /* line 1, _buttons.scss */
-.button_blue, .button_grey, .button_grey_info, .button_green, .button_red {
+.button_blue, .button_grey, .button_grey_info, li.group_section div:last-child .button_edit, li.group_section div:last-child .button_member, li.group_section div:last-child .button_join {
   background: #52b2cd;
   padding: 7px 15px;
   border-radius: 2px;
@@ -396,11 +420,11 @@ body {
   position: relative;
   margin-right: 7px; }
   /* line 12, _buttons.scss */
-  .button_blue:hover, .button_grey:hover, .button_grey_info:hover, .button_green:hover, .button_red:hover {
+  .button_blue:hover, .button_grey:hover, .button_grey_info:hover, li.group_section div:last-child .button_edit:hover, li.group_section div:last-child .button_member:hover, li.group_section div:last-child .button_join:hover {
     background: #359bb7;
     text-decoration: none; }
   /* line 17, _buttons.scss */
-  .button_blue i, .button_grey i, .button_grey_info i, .button_green i, .button_red i {
+  .button_blue i, .button_grey i, .button_grey_info i, li.group_section div:last-child .button_edit i, li.group_section div:last-child .button_member i, li.group_section div:last-child .button_join i {
     margin-right: 10px; }
 
 /* line 23, _buttons.scss */
@@ -423,22 +447,6 @@ body {
     top: 0;
     left: 0;
     border-radius: 2px; }
-
-/* line 49, _buttons.scss */
-.button_green {
-  color: white;
-  background-color: #548c5b; }
-  /* line 54, _buttons.scss */
-  .button_green:hover {
-    background: #416c46; }
-
-/* line 59, _buttons.scss */
-.button_red {
-  color: white;
-  background-color: #b62222; }
-  /* line 64, _buttons.scss */
-  .button_red:hover {
-    background: #8b1a1a; }
 
 /* line 2, _mixins.scss */
 header:after {
@@ -568,7 +576,7 @@ nav {
 .groups {
   background-color: black;
   padding: 0 5px; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1200px) {
     /* line 1, _groups.scss */
     .groups {
       display: flex;
@@ -580,23 +588,201 @@ nav {
   background-color: white;
   border: 2px solid; }
   /* line 6, _group.scss */
-  .group h1, .group h2, .group h3 {
-    margin: 0; }
+  .group h3, .group p {
+    margin: 0;
+    font-weight: 400; }
   /* line 10, _group.scss */
+  .group h3 {
+    padding-top: 15px; }
+  /* line 13, _group.scss */
   .group section:first-child {
     position: relative;
     text-align: center;
     color: white; }
-    /* line 14, _group.scss */
+    /* line 17, _group.scss */
+    .group section:first-child p {
+      padding-bottom: 15px; }
+    /* line 20, _group.scss */
     .group section:first-child a {
       text-decoration: none;
-      position: absolute;
       color: white; }
-    /* line 19, _group.scss */
+    /* line 24, _group.scss */
     .group section:first-child .close {
-      top: 0;
-      left: 0; }
-    /* line 23, _group.scss */
+      position: absolute;
+      top: -1px;
+      left: 6px;
+      font-size: 16px; }
+    /* line 30, _group.scss */
     .group section:first-child .sort {
-      top: 0;
-      right: 0; }
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      border: solid 1px #bce5f0;
+      border-radius: 2px;
+      padding: 3px 16px 3px 4px;
+      font-size: 12px; }
+    /* line 39, _group.scss */
+    .group section:first-child .sort_container {
+      position: relative; }
+      /* line 41, _group.scss */
+      .group section:first-child .sort_container i {
+        position: absolute;
+        top: -18px;
+        left: 22px; }
+    /* line 47, _group.scss */
+    .group section:first-child .sort_drop_down_blue, .group section:first-child .sort_drop_down_green, .group section:first-child .sort_drop_down_purple, .group section:first-child .sort_drop_down_grey {
+      position: absolute;
+      text-align: right;
+      top: 30px;
+      right: 3px;
+      border-radius: 2px;
+      border: solid 1px #eaeaea;
+      background-color: #359bb7;
+      padding: 3px;
+      font-size: 12px;
+      z-index: 999; }
+      /* line 58, _group.scss */
+      .group section:first-child .sort_drop_down_blue ul, .group section:first-child .sort_drop_down_green ul, .group section:first-child .sort_drop_down_purple ul, .group section:first-child .sort_drop_down_grey ul {
+        list-style-type: none; }
+        /* line 60, _group.scss */
+        .group section:first-child .sort_drop_down_blue ul .active, .group section:first-child .sort_drop_down_green ul .active, .group section:first-child .sort_drop_down_purple ul .active, .group section:first-child .sort_drop_down_grey ul .active {
+          font-weight: bold; }
+    /* line 65, _group.scss */
+    .group section:first-child .sort_drop_down_green {
+      background-color: #416c46; }
+    /* line 69, _group.scss */
+    .group section:first-child .sort_drop_down_purple {
+      background-color: #6e3f70; }
+    /* line 73, _group.scss */
+    .group section:first-child .sort_drop_down_grey {
+      background-color: #a2a2a2; }
+  /* line 78, _group.scss */
+  .group section.owned {
+    background-color: #bce5f0;
+    position: relative;
+    text-align: center;
+    color: #359bb7; }
+    /* line 83, _group.scss */
+    .group section.owned h3 {
+      padding: 8px 0px; }
+    /* line 86, _group.scss */
+    .group section.owned i {
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      font-size: 20px; }
+  /* line 93, _group.scss */
+  .group ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+
+/* line 1, _group_section.scss */
+li.group_section {
+  border-bottom: solid 1px #eaeaea;
+  padding-bottom: 10px; }
+  /* line 6, _group_section.scss */
+  li.group_section div:first-child {
+    margin-top: 15px;
+    padding: 0 10px 12px 15px;
+    text-align: center;
+    border-right: solid 1px #eaeaea;
+    float: left; }
+    /* line 13, _group_section.scss */
+    li.group_section div:first-child i {
+      display: block; }
+    /* line 17, _group_section.scss */
+    li.group_section div:first-child span {
+      color: #8a8a8a;
+      font-size: 12px; }
+  /* line 23, _group_section.scss */
+  li.group_section div:nth-child(2) {
+    display: inline-block;
+    padding-left: 10px;
+    max-width: 55%; }
+    /* line 28, _group_section.scss */
+    li.group_section div:nth-child(2) p:first-child {
+      color: black;
+      padding-top: 10px; }
+    /* line 33, _group_section.scss */
+    li.group_section div:nth-child(2) p:nth-child(2) {
+      color: #8a8a8a;
+      font-size: 13px; }
+    /* line 38, _group_section.scss */
+    li.group_section div:nth-child(2) p:last-child {
+      color: #52b2cd;
+      font-size: 11px;
+      line-height: 13px; }
+  /* line 45, _group_section.scss */
+  li.group_section div:last-child {
+    float: right;
+    margin-top: 22px;
+    margin-right: 10px; }
+    /* line 50, _group_section.scss */
+    li.group_section div:last-child .button_edit, li.group_section div:last-child .button_member, li.group_section div:last-child .button_join {
+      color: #52b2cd;
+      background-color: white;
+      border: 1px solid #52b2cd;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 10px;
+      width: 72px;
+      min-height: 30px; }
+      /* line 62, _group_section.scss */
+      li.group_section div:last-child .button_edit:hover, li.group_section div:last-child .button_member:hover, li.group_section div:last-child .button_join:hover {
+        background: #b5deea;
+        color: white; }
+    /* line 67, _group_section.scss */
+    li.group_section div:last-child .button_member {
+      color: white;
+      background-color: #548c5b;
+      border: none; }
+      /* line 74, _group_section.scss */
+      li.group_section div:last-child .button_member:hover {
+        background: #b62222; }
+        /* line 76, _group_section.scss */
+        li.group_section div:last-child .button_member:hover span {
+          display: none; }
+        /* line 79, _group_section.scss */
+        li.group_section div:last-child .button_member:hover:before {
+          content: attr(data-hover);
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 100%; }
+    /* line 88, _group_section.scss */
+    li.group_section div:last-child .button_join {
+      color: #548c5b;
+      background-color: white;
+      border: 1px solid #548c5b; }
+      /* line 94, _group_section.scss */
+      li.group_section div:last-child .button_join:hover {
+        background: #9cc4a1; }
+
+/* line 1, _footer.scss */
+footer {
+  background-color: black;
+  padding: 5px 0; }
+  /* line 2, _mixins.scss */
+  footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 7, _footer.scss */
+  footer ul {
+    list-style-type: none; }
+  /* line 11, _footer.scss */
+  footer li {
+    display: inline-block;
+    margin-right: 15px; }
+    /* line 15, _footer.scss */
+    footer li:first-child {
+      padding-right: 15px;
+      border-right: solid 1px #eaeaea; }
+    /* line 20, _footer.scss */
+    footer li:last-child {
+      float: right; }
+  /* line 25, _footer.scss */
+  footer a {
+    color: #eaeaea;
+    text-decoration: none; }
