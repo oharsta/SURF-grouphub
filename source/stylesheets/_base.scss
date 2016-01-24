@@ -15,6 +15,10 @@ body {
   background-color: $purple;
 }
 
+.background_grey {
+  background-color: $medium-grey;
+}
+
 .background_green {
   background-color: $green;
 }
@@ -33,4 +37,8 @@ body {
 
 .pull-right {
   float: right;
+}
+
+.hidden {
+  display: none;
 }

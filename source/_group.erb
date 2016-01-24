@@ -1,34 +1,39 @@
-<div class="group">
+<div id="<%= "group_#{group}" %>" class="group <%=  hidden ? 'hidden' : '' %>">
   <section class="<%= "background_#{type}" %>">
-    <a href="#" class="close"><i class="fa fa-times"></i></a>
+    <a id="<%= "close_#{group}" %>" href="#" class="close"><i class="fa fa-times"></i></a>
     <a href="#" class="sort">
       <i class="fa fa-sort-amount-asc"></i>
       <span>A-Z</span>
-      <i class="fa fa-sort-down"></i>
+      <span class="sort_container">
+        <i class="fa fa-sort-down"></i>
+      </span>
     </a>
     <div>
-      <h1>MY GROUPS</h1>
-      <p>You own or are a member of the group</p>
+      <h3 ><%= I18n.t("groups.#{group}") %></h3>
+      <p><%= I18n.t("groups.#{group}_description") %></p>
     </div>
   </section>
-  <section>
-    <i class="fa fa-angle-down"></i>
-    <h2>Owner</h2>
-  </section>
+  <% if group == :my_groups %>
+    <section class="owned">
+      <i class="fa fa-angle-down"></i>
+      <h3>Owner</h3>
+    </section>
+      <ul>
+        <% 3.times do |i| %>
+            <%= partial(:group_section, locals: {group: group}) %>
+        <% end %>
+      </ul>
+  <% end %>
+
+  <% if group == :my_groups %>
+      <section class="owned">
+        <i class="fa fa-angle-down"></i>
+        <h3>Administrator</h3>
+      </section>
+  <% end %>
   <ul>
-    <li>
-      <div>
-        <i class="fa fa-user"></i>
-        <span>12</span>
-      </div>
-      <div>
-        <h3>Data Management Landscape</h3>
-        <p>Temporibus autem quibusdam et aut.</p>
-        <span>15 December 2015</span>
-      </div>
-      <div>
-        <a class="button_green" href="#">Member</a>
-      </div>
-    </li>
+    <% 8.times do |i| %>
+        <%= partial(:group_section, locals: {group: group}) %>
+    <% end %>
   </ul>
 </div>

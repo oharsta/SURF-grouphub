@@ -1,0 +1,8 @@
+<div class="groups">
+
+  <% {my_groups: :blue, organisation_groups: :green, all_groups: :purple}.each do |key, value| %>
+      <%= partial(:group, locals: {group: key, type: value, hidden: false}) %>
+  <% end %>
+
+  <%= partial(:group, locals: {group: :search, type: :grey, hidden: true}) %>
+</div>

@@ -5,10 +5,12 @@ Middleman project with static SURFnet-grouphub site.
 ### [System Requirements](#system-requirements)
 
 - ruby
+- npm
 
 ### [Install](#install)
 
 ```bash
+npm install
 bundle install --path vendor/bundle
 bundle exec middleman
 ```

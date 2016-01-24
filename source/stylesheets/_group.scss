@@ -3,26 +3,60 @@
   background-color: white;
   border: 2px solid;
 
-  h1, h2, h3 {
+  h3, p {
     margin: 0;
+    font-weight: 400;
   }
-
+  h3 {
+    padding-top: 15px;
+  }
   section:first-child {
     position: relative;
     text-align: center;
     color: white;
+    p {
+      padding-bottom: 15px;
+    }
     a {
       text-decoration: none;
       position: absolute;
       color: white;
     }
     .close {
-      top: 0;
-      left: 0;
+      top: -1px;
+      left: 5px;
+      font-size: 16px;
     }
     .sort {
-      top: 0;
-      right: 0;
+      top: 3px;
+      right: 3px;
+      border: solid 1px $light-blue;
+      border-radius: $br;
+      padding: 3px 16px 3px 4px;
+      font-size: 12px;
+    }
+    .sort_container {
+      position: relative;
+      i {
+        position: absolute;
+        top: -18px;
+        left: 22px;
+      }
+    }
+  }
+  section.owned {
+    background-color: $light-blue;
+    position: relative;
+    text-align: center;
+    color: darken($blue, 10);
+    h3 {
+      padding: 10px 0px;
+    }
+    i {
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      font-size: 20px;
     }
   }
 }

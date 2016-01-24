@@ -1,13 +1,7 @@
 ---
-title:
+title: SURF - Grouphub
 ---
 
 <%= partial "header" %>
 <%= partial "navigation" %>
-<div class="groups">
-
-  <% {my_groups: "blue", organisation_groups: "green", all_groups: "purple"}.each do |key, value| %>
-      <%= partial(:group, locals: {group: key, type: value, owned: key == "my_groups"}) %>
-  <% end %>
-
-</div>
+<%= partial "groups" %>
