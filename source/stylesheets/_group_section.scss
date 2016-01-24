@@ -57,9 +57,11 @@ li.group_section {
       font-weight: bold;
       padding: 5px 10px;
       width: 72px;
+      min-height: 30px;
 
       &:hover {
-        background: darken(white, 10);
+        background: lighten($blue, 25);
+        color: white;
       }
     }
     .button_member {
@@ -70,27 +72,27 @@ li.group_section {
       border: none;
 
       &:hover {
-        background: darken($green, 10);
+        background: $red;
+        span {
+          display: none;
+        }
+        &:before {
+          content: attr(data-hover);
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 100%;
+        }
       }
-    }
-    .button_leave {
-      @extend .button_member;
-      color: white;
-      background-color: $red;
-
-      &:hover {
-        background: darken($red, 10);
-      }
-
     }
     .button_join {
-      @extend .button_member;
+      @extend .button_edit;
       color: $green;
       background-color: white;
       border: 1px solid $green;
 
       &:hover {
-        background: darken(white, 10);
+        background: lighten($green, 25);
       }
     }
   }

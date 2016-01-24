@@ -8,6 +8,16 @@ class App {
   }
 
   start() {
+    this.groupsSelector();
+    this.sortingSelector();
+  }
+
+  sortingSelector() {
+    // all a of sort_menu_blue, on click then toggle hidden on sort_drop_down_blue
+    // all a's in sort_drop_down_blue toggle hidden on sort_drop_down_blue
+  }
+
+  groupsSelector() {
     let toggle = (id, state) => (e) => {
       let group = document.querySelector(id);
       group.classList.toggle('hidden', state);

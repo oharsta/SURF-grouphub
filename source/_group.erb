@@ -1,13 +1,20 @@
 <div id="<%= "group_#{group}" %>" class="group <%= hidden ? 'hidden' : '' %>">
   <section class="<%= "background_#{type}" %>">
     <a id="<%= "close_#{group}" %>" href="#" class="close"><i class="fa fa-times"></i></a>
-    <a href="#" class="sort">
-      <i class="fa fa-sort-amount-asc"></i>
+    <div class="sort">
+      <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
       <span>A-Z</span>
       <span class="sort_container">
-        <i class="fa fa-sort-down"></i>
+        <a id="<%= "sort_menu_#{type}" %>" href="#"><i class="fa fa-sort-down"></i></a>
       </span>
-    </a>
+    </div>
+    <div id="<%= "sort_drop_down_#{type}" %>" class="<%= "sort_drop_down_#{type}" %>">
+      <ul>
+        <li><a href="#" class="active">Title</a></li>
+        <li><a href="#">Description</a></li>
+        <li><a href="#">Date</a></li>
+      </ul>
+    </div>
     <div>
       <h3><%= I18n.t("groups.#{group}") %></h3>
       <p><%= I18n.t("groups.#{group}_description") %></p>
