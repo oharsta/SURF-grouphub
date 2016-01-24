@@ -1,4 +1,4 @@
-<div id="<%= "group_#{group}" %>" class="group <%=  hidden ? 'hidden' : '' %>">
+<div id="<%= "group_#{group}" %>" class="group <%= hidden ? 'hidden' : '' %>">
   <section class="<%= "background_#{type}" %>">
     <a id="<%= "close_#{group}" %>" href="#" class="close"><i class="fa fa-times"></i></a>
     <a href="#" class="sort">
@@ -9,18 +9,18 @@
       </span>
     </a>
     <div>
-      <h3 ><%= I18n.t("groups.#{group}") %></h3>
+      <h3><%= I18n.t("groups.#{group}") %></h3>
       <p><%= I18n.t("groups.#{group}_description") %></p>
     </div>
   </section>
   <% if group == :my_groups %>
-    <section class="owned">
-      <i class="fa fa-angle-down"></i>
-      <h3>Owner</h3>
-    </section>
+      <section class="owned">
+        <i class="fa fa-angle-down"></i>
+        <h3>Owner</h3>
+      </section>
       <ul>
-        <% 3.times do |i| %>
-            <%= partial(:group_section, locals: {group: group}) %>
+        <% 2.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :edit}) %>
         <% end %>
       </ul>
   <% end %>
@@ -30,10 +30,35 @@
         <i class="fa fa-angle-down"></i>
         <h3>Administrator</h3>
       </section>
+      <ul>
+        <% 2.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :edit}) %>
+        <% end %>
+      </ul>
   <% end %>
-  <ul>
-    <% 8.times do |i| %>
-        <%= partial(:group_section, locals: {group: group}) %>
-    <% end %>
-  </ul>
+
+  <% if group == :my_groups %>
+      <section class="owned">
+        <i class="fa fa-angle-down"></i>
+        <h3>Member</h3>
+      </section>
+      <ul>
+        <% 2.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :member}) %>
+        <% end %>
+      </ul>
+  <% elsif group == :organisation_groups %>
+      <ul>
+        <% 5.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :member}) %>
+        <% end %>
+      </ul>
+  <% else %>
+      <ul>
+        <% 30.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :join}) %>
+        <% end %>
+      </ul>
+  <% end %>
+
 </div>

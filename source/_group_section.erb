@@ -1,14 +1,14 @@
-<li>
+<li class="group_section">
   <div>
-    <i class="fa fa-user"></i>
+    <i class="<%= "fa fa-user #{type}" %>"></i>
     <span>12</span>
   </div>
   <div>
-    <h3>Data Management Landscape</h3>
+    <p>Data Management Landscape</p>
     <p>Temporibus autem quibusdam et aut.</p>
-    <span>15 December 2015</span>
+    <p>15 December 2015</p>
   </div>
   <div>
-    <a class="button_green" href="#">Member</a>
+    <a class="<%= "button_#{action}" %>" href="#"><%= I18n.t("action.#{action}") %></a>
   </div>
 </li>
