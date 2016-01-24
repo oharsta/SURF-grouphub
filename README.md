@@ -19,6 +19,7 @@ To build a new version and deploy to [github.io](http://oharsta.github.io/SURF-g
 
 ```bash
 git checkout gh-pages
+git merge master
 bundle exec middleman build
 git push
 ```
