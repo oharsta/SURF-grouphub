@@ -1,17 +1,18 @@
 <nav>
   <ul>
     <% {my_groups: :blue, organisation_groups: :green, all_groups: :purple}.each do |key, value| %>
+        <% selectorId = "select_#{key}" %>
         <li>
-          <input id="<%= key %>" type="checkbox" checked/>
-          <label class="<%= "background_#{value}" %>" for="<%= key %>"><span><i class="fa fa-check"></i></span></label>
-          <label class="white" for="<%= key %>"><%= I18n.t("nav_#{key}") %></label>
+          <input id="<%= selectorId %>" type="checkbox" checked/>
+          <label class="<%= "background_#{value}" %>" for="<%= selectorId %>"><span><i class="fa fa-check"></i></span></label>
+          <label class="white" for="<%= selectorId %>"><%= I18n.t("nav.#{key}") %></label>
         </li>
     <% end %>
   </ul>
   <div class="search_container">
     <div class="input_container">
       <i class="fa fa-search"></i>
-      <input placeholder="Search..." type="text"/>
+      <input id="searchInput" placeholder="Search..." type="text"/>
     </div>
   </div>
 </nav>

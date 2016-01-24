@@ -45,23 +45,3 @@
     border-radius: $br;
   }
 }
-
-.button_green {
-  @extend .button_blue;
-  color: white;
-  background-color: $green;
-
-  &:hover {
-    background: darken($green,10)
-  }
-}
-
-.button_red {
-  @extend .button_blue;
-  color: white;
-  background-color: $red;
-
-  &:hover {
-    background: darken($red,10)
-  }
-}

@@ -43,7 +43,7 @@ nav {
     margin-top: 7px;
     @media screen and (max-width: $medium) {
       margin: 0 auto;
-      width: 90%;
+      width: 97%;
     }
     @media screen and (min-width: $medium) {
       float: right;
@@ -72,6 +72,9 @@ nav {
         color: $medium-grey;
         &:focus {
           outline: none;
+        }
+        @media screen and (max-width: $medium) {
+          margin-right: 0;
         }
       }
     }

@@ -25,6 +25,11 @@ set :images_dir, 'images'
 activate :asset_hash
 activate :relative_assets
 activate :i18n
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ? './node_modules/webpack/bin/webpack.js -p --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
+         source: '.tmp/dist',
+         latency: 1
 
 # Reload the browser automatically whenever files change
 configure :development do

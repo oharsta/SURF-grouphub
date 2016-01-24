@@ -1,5 +1,21 @@
 ---
 en:
-  nav_my_groups: "My Groups"
-  nav_organisation_groups: "Organisation Groups"
-  nav_all_groups: "All Groups"
+  nav:
+    my_groups: "My groups"
+    organisation_groups: "Organisation groups"
+    all_groups: "All groups"
+    search: "Data"
+  groups:
+    my_groups: "MY GROUPS"
+    organisation_groups: "ORGANISATION GROUPS"
+    all_groups: "ALL GROUPS"
+    search: "SEARCH"
+    my_groups_description: "You own or are a member of the group"
+    organisation_groups_description: "You are a member of these groups"
+    all_groups_description: "There is a total of 213 groups"
+    search_description: "Results for data"
+  action:
+    edit: "EDIT"
+    member: "MEMBER"
+    leave: "LEAVE"
+    join: "JOIN"

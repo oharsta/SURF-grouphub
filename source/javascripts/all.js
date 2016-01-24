@@ -1,1 +1,3 @@
-//= require_tree .
+import App from './App';
+
+document.addEventListener('DOMContentLoaded', () => App.start());

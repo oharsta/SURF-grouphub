@@ -1,0 +1,100 @@
+li.group_section {
+
+  border-bottom: solid 1px $light-grey;
+  padding-bottom: 10px;
+
+  div:first-child {
+    margin-top: 15px;
+    padding: 0 10px 12px 15px;
+    text-align: center;
+    border-right: solid 1px $light-grey;
+    float: left;
+
+    i {
+      display: block;
+    }
+
+    span {
+      color: $darker-grey;
+      font-size: 12px;
+    }
+  }
+
+  div:nth-child(2) {
+    display: inline-block;
+    padding-left: 10px;
+    max-width: 55%;
+
+    p:first-child {
+      color: black;
+      padding-top: 10px;
+    }
+
+    p:nth-child(2) {
+      color: $darker-grey;
+      font-size: 13px;
+    }
+
+    p:last-child {
+      color: $blue;
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+
+  div:last-child {
+    float: right;
+    margin-top: 22px;
+    margin-right: 10px;
+
+    .button_edit {
+      @extend .button_blue;
+      color: $blue;
+      background-color: white;
+      border: 1px solid $blue;
+
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 10px;
+      width: 72px;
+      min-height: 30px;
+
+      &:hover {
+        background: lighten($blue, 25);
+        color: white;
+      }
+    }
+    .button_member {
+      @extend .button_edit;
+
+      color: white;
+      background-color: $green;
+      border: none;
+
+      &:hover {
+        background: $red;
+        span {
+          display: none;
+        }
+        &:before {
+          content: attr(data-hover);
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+    .button_join {
+      @extend .button_edit;
+      color: $green;
+      background-color: white;
+      border: 1px solid $green;
+
+      &:hover {
+        background: lighten($green, 25);
+      }
+    }
+  }
+
+}
