@@ -30,6 +30,16 @@
   }
 }
 
+.button_dark_grey {
+  @extend .button_blue;
+  color: white;
+  background-color: $grey;
+
+  &:hover {
+    background: darken($grey,10)
+  }
+}
+
 .button_grey_info {
   @extend .button_grey;
 

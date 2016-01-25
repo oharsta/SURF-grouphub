@@ -1,0 +1,16 @@
+.notification{
+
+  table {
+    width: 100%;
+    td:first-child {
+      color: $darker-grey;
+      width: 15%;
+    }
+    td:last-child {
+      width: 85%;
+    }
+  }
+  a {
+    margin: 15px 10px 5px 0px;
+  }
+}

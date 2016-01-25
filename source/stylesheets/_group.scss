@@ -49,6 +49,7 @@
       text-align: right;
       top: 30px;
       right: 3px;
+      min-width: 80px;
       border-radius: $br;
       border: solid 1px $light-grey;
       background-color: darken($blue, 10);
@@ -57,8 +58,16 @@
       z-index: 999;
       ul {
         list-style-type: none;
-        .active {
-          font-weight: bold;
+        a {
+          &:hover {
+            font-weight: bold;
+          }
+          &.active:before {
+            content: "*";
+            position: absolute;
+            top: 0;
+            left: 1px;
+          }
         }
       }
     }

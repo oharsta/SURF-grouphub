@@ -1,0 +1,51 @@
+.modal-open {
+   overflow: hidden;
+ }
+
+.modal_container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-color: rgba(22, 22, 22, 0.7);
+  @media screen and (max-width: $medium) {
+    background-color: black;
+  }
+}
+
+.modal {
+  position: relative;
+  margin: 0 auto;
+  top: 10%;
+  width: 50%;
+  max-height: 80%;
+  overflow-y: auto;
+
+  @media screen and (max-width: $medium) {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal_header {
+    position: relative;
+    background-color: $blue;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+
+    p {
+      margin: 0;
+      font-size: 26px;
+    }
+  }
+
+}
+
+a.close_modal {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 34px;
+  color: white;
+}

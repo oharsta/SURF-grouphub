@@ -44,4 +44,11 @@ header {
       }
     }
   }
+
+  li.language-selector {
+    position: relative;
+    a:last-child {
+      position: absolute;
+    }
+  }
 }

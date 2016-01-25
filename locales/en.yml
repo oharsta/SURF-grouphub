@@ -19,3 +19,6 @@ en:
     member: "MEMBER"
     leave: "LEAVE"
     join: "JOIN"
+  group:
+    new: "NEW GROUP"
+    edit: "EDIT GROUP"
