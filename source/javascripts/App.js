@@ -10,24 +10,35 @@ class App {
   start() {
     this.groupsSelector();
     this.sortingSelector();
+    this.languageSelector();
+    this.modals();
+  }
+
+  toggleHidden(e, id, force) {
+    this.stop(e);
+    let item = document.querySelector(id);
+    if (force !== undefined) {
+      item.classList.toggle('hidden', force);
+    } else {
+      //is necessary for some browsers
+      item.classList.toggle('hidden');
+    }
   }
 
   sortingSelector() {
-    // all a of sort_menu_blue, on click then toggle hidden on sort_drop_down_blue
-    // all a's in sort_drop_down_blue toggle hidden on sort_drop_down_blue
+    ['blue', 'green', 'purple', 'grey'].forEach((s) => {
+      let sortToggle = document.querySelector('#sort_menu_' + s);
+      sortToggle.addEventListener('click', (e) => this.toggleHidden(e, '#sort_drop_down_' + s));
+      let links = Array.from(document.querySelectorAll('#sort_drop_down_' + s + ' a'));
+      links.forEach((link)=> link.addEventListener('click', (e) => this.toggleHidden(e, '#sort_drop_down_' + s)));
+    });
   }
 
   groupsSelector() {
-    let toggle = (id, state) => (e) => {
-      let group = document.querySelector(id);
-      group.classList.toggle('hidden', state);
-    };
     ['all_groups', 'organisation_groups', 'my_groups', 'search'].forEach((key) => {
       let link = document.querySelector('#close_' + key);
       link.addEventListener('click', (e) => {
-        this.stop(e);
-        let group = document.querySelector('#group_' + key);
-        group.classList.toggle('hidden', true);
+        this.toggleHidden(e,'#group_' + key, true);
         //need to unselect the checkbox for state consistency
         let checkbox = document.querySelector('#select_' + key);
         if (checkbox) {
@@ -39,21 +50,34 @@ class App {
       });
       let selector = document.querySelector('#select_' + key);
       if (selector) {
-        selector.addEventListener('change', (e) => {
-          let group = document.querySelector('#group_' + key);
-          group.classList.toggle('hidden', !e.target.checked);
-        })
+        selector.addEventListener('change', (e) => this.toggleHidden(e, '#group_' + key, !e.target.checked));
       }
     });
     let searchInput = document.querySelector('#searchInput');
     searchInput.addEventListener('keyup', (e) => {
       if (e.keyCode === 13) {
-        let search = document.querySelector('#group_search');
-        search.classList.toggle('hidden', false);
+        this.toggleHidden(e, '#group_search', false);
       }
     })
   }
 
+  modals() {
+    let toggleModal = (id, e) => {
+      this.stop(e);
+      document.querySelector('body').classList.toggle('modal-open');
+      document.querySelector(id).classList.toggle('hidden');
+    };
+    ['notifications', 'edit_group'].forEach((s) => {
+      document.querySelector('#' + s + '_link').addEventListener('click', (e) => toggleModal('#' + s, e));
+      document.querySelector('#' + s + '_close').addEventListener('click', (e) => toggleModal('#' + s, e));
+    })
+  }
+
+  languageSelector() {
+    ['#language_selector_link', '#language_selector_menu'].forEach((s) =>
+      document.querySelector(s).addEventListener('click', (e) => this.toggleHidden(e, '#language_selector_menu'))
+    );
+  }
 }
 
 export default new App()
