@@ -11,8 +11,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <link href="stylesheets/site-bdb23ed6.css" rel="stylesheet" />
-    <script src="javascripts/all-29a66be8.js"></script>
+    <link href="stylesheets/site-5a1cf2fa.css" rel="stylesheet" />
+    <script src="javascripts/all-a9a0412f.js"></script>
   </head>
 
   <body class="index">
@@ -23,10 +23,13 @@
   </ul>
 
   <ul>
-    <li><a class="button_blue" href="#"><i class="fa fa-plus-circle"></i>New Group</a></li>
-    <li><a class="button_grey_info" href="#"><span>5</span>Notifcations</a></li>
+    <li><a class="button_blue" id="edit_group_link" href="#"><i class="fa fa-plus-circle"></i>New Group</a></li>
+    <li><a class="button_grey_info" id="notifications_link" href="#"><span>5</span>Notifications</a></li>
     <li><a class="button_grey" href="#">Info</a></li>
-    <li><a class="button_grey" href="#">EN<i class="fa fa-sort-down"></i></a></li>
+    <li class="language-selector">
+      <a class="button_grey" id="language_selector_link" href="#">EN<i class="fa fa-sort-down"></i></a>
+      <a class="button_grey hidden" id="language_selector_menu" href="#">NL</a>
+    </li>
   </ul>
 </header>
 <nav>
@@ -67,7 +70,7 @@
         <a id="sort_menu_blue" href="#"><i class="fa fa-sort-down"></i></a>
       </span>
     </div>
-    <div id="sort_drop_down_blue" class="sort_drop_down_blue">
+    <div id="sort_drop_down_blue" class="hidden sort_drop_down_blue">
       <ul>
         <li><a href="#" class="active">Title</a></li>
         <li><a href="#">Description</a></li>
@@ -195,7 +198,7 @@
         <a id="sort_menu_green" href="#"><i class="fa fa-sort-down"></i></a>
       </span>
     </div>
-    <div id="sort_drop_down_green" class="sort_drop_down_green">
+    <div id="sort_drop_down_green" class="hidden sort_drop_down_green">
       <ul>
         <li><a href="#" class="active">Title</a></li>
         <li><a href="#">Description</a></li>
@@ -293,7 +296,7 @@
         <a id="sort_menu_purple" href="#"><i class="fa fa-sort-down"></i></a>
       </span>
     </div>
-    <div id="sort_drop_down_purple" class="sort_drop_down_purple">
+    <div id="sort_drop_down_purple" class="hidden sort_drop_down_purple">
       <ul>
         <li><a href="#" class="active">Title</a></li>
         <li><a href="#">Description</a></li>
@@ -742,7 +745,7 @@
         <a id="sort_menu_grey" href="#"><i class="fa fa-sort-down"></i></a>
       </span>
     </div>
-    <div id="sort_drop_down_grey" class="sort_drop_down_grey">
+    <div id="sort_drop_down_grey" class="hidden sort_drop_down_grey">
       <ul>
         <li><a href="#" class="active">Title</a></li>
         <li><a href="#">Description</a></li>
@@ -1189,5 +1192,201 @@
   </ul>
 
 </footer>
+
+
+<section id="notifications" class="notifications_container hidden">
+  <div class="notifications">
+    <header>
+      <a id="notifications_close" href="#" class="close_modal"><i class="fa fa-times"></i></a>
+      <p>NOTIFICATIONS</p>
+    </header>
+        <article class="notification">
+  <table>
+    <tr>
+      <td>Datum</td>
+      <td>1 januari 2016 14:38</td>
+    </tr>
+    <tr>
+      <td>Groep</td>
+      <td>Data Management Landscape</td>
+    </tr>
+    <tr>
+      <td>Gebruiker</td>
+      <td>John Doe</td>
+    </tr>
+    <tr>
+      <td>Bericht</td>
+      <td>mag ik lid worden van deze groep</td>
+    </tr>
+  </table>
+  <a href="#" class="button_blue">Accepteer</a>
+  <a href="#" class="button_grey">Annuleer</a>
+</article>
+        <article class="notification">
+  <table>
+    <tr>
+      <td>Datum</td>
+      <td>1 januari 2016 14:38</td>
+    </tr>
+    <tr>
+      <td>Groep</td>
+      <td>Data Management Landscape</td>
+    </tr>
+    <tr>
+      <td>Gebruiker</td>
+      <td>John Doe</td>
+    </tr>
+    <tr>
+      <td>Bericht</td>
+      <td>mag ik lid worden van deze groep</td>
+    </tr>
+  </table>
+  <a href="#" class="button_blue">Accepteer</a>
+  <a href="#" class="button_grey">Annuleer</a>
+</article>
+        <article class="notification">
+  <table>
+    <tr>
+      <td>Datum</td>
+      <td>1 januari 2016 14:38</td>
+    </tr>
+    <tr>
+      <td>Groep</td>
+      <td>Data Management Landscape</td>
+    </tr>
+    <tr>
+      <td>Gebruiker</td>
+      <td>John Doe</td>
+    </tr>
+    <tr>
+      <td>Bericht</td>
+      <td>mag ik lid worden van deze groep</td>
+    </tr>
+  </table>
+  <a href="#" class="button_blue">Accepteer</a>
+  <a href="#" class="button_grey">Annuleer</a>
+</article>
+        <article class="notification">
+  <table>
+    <tr>
+      <td>Datum</td>
+      <td>1 januari 2016 14:38</td>
+    </tr>
+    <tr>
+      <td>Groep</td>
+      <td>Data Management Landscape</td>
+    </tr>
+    <tr>
+      <td>Gebruiker</td>
+      <td>John Doe</td>
+    </tr>
+    <tr>
+      <td>Bericht</td>
+      <td>mag ik lid worden van deze groep</td>
+    </tr>
+  </table>
+  <a href="#" class="button_blue">Accepteer</a>
+  <a href="#" class="button_grey">Annuleer</a>
+</article>
+        <article class="notification">
+  <table>
+    <tr>
+      <td>Datum</td>
+      <td>1 januari 2016 14:38</td>
+    </tr>
+    <tr>
+      <td>Groep</td>
+      <td>Data Management Landscape</td>
+    </tr>
+    <tr>
+      <td>Gebruiker</td>
+      <td>John Doe</td>
+    </tr>
+    <tr>
+      <td>Bericht</td>
+      <td>mag ik lid worden van deze groep</td>
+    </tr>
+  </table>
+  <a href="#" class="button_blue">Accepteer</a>
+  <a href="#" class="button_grey">Annuleer</a>
+</article>
+        <article class="notification">
+  <table>
+    <tr>
+      <td>Datum</td>
+      <td>1 januari 2016 14:38</td>
+    </tr>
+    <tr>
+      <td>Groep</td>
+      <td>Data Management Landscape</td>
+    </tr>
+    <tr>
+      <td>Gebruiker</td>
+      <td>John Doe</td>
+    </tr>
+    <tr>
+      <td>Bericht</td>
+      <td>mag ik lid worden van deze groep</td>
+    </tr>
+  </table>
+  <a href="#" class="button_blue">Accepteer</a>
+  <a href="#" class="button_grey">Annuleer</a>
+</article>
+        <article class="notification">
+  <table>
+    <tr>
+      <td>Datum</td>
+      <td>1 januari 2016 14:38</td>
+    </tr>
+    <tr>
+      <td>Groep</td>
+      <td>Data Management Landscape</td>
+    </tr>
+    <tr>
+      <td>Gebruiker</td>
+      <td>John Doe</td>
+    </tr>
+    <tr>
+      <td>Bericht</td>
+      <td>mag ik lid worden van deze groep</td>
+    </tr>
+  </table>
+  <a href="#" class="button_blue">Accepteer</a>
+  <a href="#" class="button_grey">Annuleer</a>
+</article>
+  </div>
+
+</section>
+<section id="edit_group" class="edit_group_container hidden">
+  <div class="edit_group">
+    <header>
+      <a id="edit_group_close" href="#" class="close_modal"><i class="fa fa-times"></i></a>
+      <p>NEW GROUP</p>
+    </header>
+    <form action="">
+      <div class="form_element">
+        <label for="name_group">Name</label>
+        <input id="name_group" name="name_group" type="text" placeholder="Name...">
+      </div>
+      <div class="form_element">
+        <label for="name_description">Description</label>
+        <textarea id="name_description" name="name_description" cols="5" placeholder="Description..."></textarea>
+      </div>
+      <div class="form_element">
+        <label for="type_group">Type</label>
+        <select name="type_group" id="type_group">
+          <option value="">Select a type...</option>
+          <option value="admin">Admin</option>
+          <option value="admin">Organisation</option>
+          <option value="admin">Private</option>
+          <option value="admin">Public</option>
+        </select>
+      </div>
+      <a href="#" class="button_blue">Submit</a>
+      <a href="#" class="button_dark_grey">Cancel</a>
+    </form>
+  </div>
+
+</section>
   </body>
 </html>
