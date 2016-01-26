@@ -1,54 +1,37 @@
 .edit_group_container {
   @extend .modal_container;
 
+  ul.icons {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    z-index: 999;
+
+    li {
+      background-color: $medium-blue;
+      margin-bottom: 3px;
+      &:last-child {
+        border: none;
+      }
+      a {
+        padding: 6px;
+        color: $light-grey;
+        font-size: 20px;
+      }
+    }
+  }
+
   div.edit_group {
     @extend .modal;
     background-color: $light-grey;
 
     header {
       @extend .modal_header;
+
     }
 
-    form {
-      padding: 20px 30px;
-      border-radius: $br;
-
-      .form_element {
-        padding: 10px;
-      }
-
-      label {
-        color: $dark-grey;
-        min-width: 90px;
-        display: inline-block;
-      }
-
-      input, textarea, select {
-        width: 80%;
-        display: inline-block;
-        border-radius: $br;
-        border: 1px solid $medium-grey;
-        background-color: white;
-        padding: 2px;
-        -webkit-appearance: none;
-        -webkit-border-radius: $br;
-
-        @media screen and (max-width: $medium) {
-          width: 100%;
-        }
-      }
-
-      input, select {
-        height: 26px;
-      }
-      a {
-        margin: 30px 10px 5px 105px;
-
-        &.button_dark_grey {
-          margin-left: 0;
-        }
-      }
-    }
   }
 
 }
