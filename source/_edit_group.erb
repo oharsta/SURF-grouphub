@@ -1,34 +1,37 @@
 <section id="edit_group" class="edit_group_container hidden">
 
   <div class="edit_group">
-    <header>
-      <a id="edit_group_close" href="#" class="close_modal"><i class="fa fa-times"></i></a>
-      <p>Data Management Landscape</p>
-      <div class="hidden">Libraries and the Research Data Management Landscape of library and science, as well as
-        influence and participate in national policy
-      </div>
-    </header>
-    <ul class="tabs">
+    <div class="left">
+      <header>
+        <a id="edit_group_close" href="#" class="close_modal"><i class="fa fa-times"></i></a>
+        <p>Data Management Landscape</p>
+        <i class="fa fa-angle-double-down"></i>
+        <div class="hidden">Libraries and the Research Data Management Landscape of library and science, as well as
+          influence and participate in national policy
+        </div>
+      </header>
+      <ul class="tabs">
+        <li>
+          <a id="group_members" href="#">Group members</a>
+        </li>
+        <li>
+          <a id="add_members" href="#"><i class="rounded fa fa-plus"></i>Add members</a>
+        </li>
+      </ul>
+      <%= partial "group_members_tab" %>
+      <%= partial "add_members_tab" %>
+    </div>
+    <ul class="icons right">
       <li>
-        <a id="group_members" href="#" class="rounded"><i class="fa fa-plus"></i>Group members</a>
+        <a id="edit_group" href="#"><i class="fa fa-edit"></i></a>
       </li>
       <li>
-        <a id="add_members" href="#">Add members</a>
+        <a id="download_group" href="#"><i class="fa fa-download"></i></a>
+      </li>
+      <li>
+        <a id="delete_group" href="#"><i class="fa fa-trash"></i></a>
       </li>
     </ul>
-    <%= partial "group_members_tab" %>
-    <%= partial "add_members_tab" %>
   </div>
-  <ul class="icons">
-    <li>
-      <a id="edit_group" href="#"><i class="fa fa-edit"></i></a>
-    </li>
-    <li>
-      <a id="download_group" href="#"><i class="fa fa-download"></i></a>
-    </li>
-    <li>
-      <a id="delete_group" href="#"><i class="fa fa-trash"></i></a>
-    </li>
-  </ul>
 
 </section>

@@ -1,21 +1,19 @@
 <div id="group_members_tab">
-  <div class="search_container">
-    <div class="input_container">
-      <i class="fa fa-search"></i>
-      <input id="search_users" placeholder="Search..." type="text"/>
-    </div>
-  </div>
+  <%= partial :search_container %>
   <ul class="users">
     <% 25.times do |i| %>
         <li>
-          <p>John Doe</p>
-          <span>john.doe@example.com</span>
+          <div>
+            <p>John Doe</p>
+            <span>john.doe@example.com</span>
+          </div>
+          <a href="#" class="rounded"><i class="fa fa-minus"></i></a>
           <select name="roles" id="roles">
             <option value="admin">Admin</option>
             <option value="manager" selected>Member</option>
             <option value="member">Manager</option>
           </select>
-          <a href="#" class="rounded"><i class="fa fa-minus"></i></a>
+
         </li>
     <% end %>
   </ul>
