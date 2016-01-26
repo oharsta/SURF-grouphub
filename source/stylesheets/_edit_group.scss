@@ -1,51 +1,199 @@
 .edit_group_container {
   @extend .modal_container;
 
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  /* DAMN YOU DENNIS */
+
   div.edit_group {
     @extend .modal;
-    background-color: $light-grey;
+
+    overflow-y: hidden;
+    background-color: transparent;
 
     header {
       @extend .modal_header;
+      i {
+        position: absolute;
+        top: 47%;
+        right: 10px;
+      }
+      a.close_modal {
+        top: 28%;
+        left: 10%;
+      }
+    }
+    .left {
+      background-color: $light-grey;
+
+      @media screen and (max-width: $medium) {
+        width: 100%;
+      }
+      @media screen and (min-width: $medium) {
+        width: 565px;
+      }
+      @media screen and (min-width: $large) {
+        width: 765px;
+      }
+    }
+  }
+  ul.icons {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    list-style-type: none;
+    position: absolute;
+
+    z-index: 999;
+    @media screen and (max-width: $medium) {
+      top: 0;
+      right: 0;
+    }
+    @media screen and (min-width: $medium) {
+      top: 0;
+      right: 0;
     }
 
-    form {
-      padding: 20px 30px;
-      border-radius: $br;
-
-      .form_element {
-        padding: 10px;
-      }
-
-      label {
-        color: $dark-grey;
-        min-width: 90px;
-        display: inline-block;
-      }
-
-      input, textarea, select {
-        width: 80%;
-        display: inline-block;
-        border-radius: $br;
-        border: 1px solid $medium-grey;
-        background-color: white;
-        padding: 2px;
-        -webkit-appearance: none;
-        -webkit-border-radius: $br;
-
-        @media screen and (max-width: $medium) {
-          width: 100%;
-        }
-      }
-
-      input, select {
-        height: 26px;
+    li {
+      background-color: $medium-blue;
+      margin-bottom: 2px;
+      &:last-child {
+        border: none;
       }
       a {
-        margin: 30px 10px 5px 105px;
+        i {
+          color: $light-grey;
+          padding: 8px;
+          font-size: 16px;
+        }
 
-        &.button_dark_grey {
-          margin-left: 0;
+      }
+    }
+  }
+  ul.tabs {
+    @include clearFix;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      text-align: center;
+      width: 50%;
+      padding: 10px;
+      a {
+        text-decoration: none;
+      }
+
+      &:first-child {
+        float: left;
+        background-color: white;
+        border-bottom: 0.5px solid $blue;
+        a {
+          color: $blue;
+        }
+      }
+      &:last-child {
+        float: right;
+        background-color: $medium-blue;
+        a {
+          color: white;
+        }
+        i {
+          background-color: white;
+          color: $blue;
+          border-radius: 50%;
+          padding: 2px 3px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .search_container {
+    border-bottom: 3px solid $light-grey;
+
+    .input_container {
+      position: relative;
+      width: 100%;
+      padding: 15px;
+      background-color: white;
+      i {
+        position: absolute;
+        font-size: 20px;
+        top: 19px;
+        left: 23px;
+        color: $blue;
+      }
+      input {
+        display: inline-block;
+        padding: 4px 4px 4px 30px;
+        width: 100%;
+        border-radius: $br;
+        border: 1px solid $light-grey;
+        background-color: $light-grey;
+        color: $dark-grey;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  ul.users {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-y: auto;
+    max-height: 600px;
+
+    li {
+      padding: 10px 0px 10px 20px;
+      border-bottom: 1px solid $light-grey;
+      div {
+        display: inline-block;
+
+      }
+      p {
+        margin:0;
+        padding:0;
+      }
+      span {
+        color: #8a8a8a;
+        font-size: 13px;
+      }
+      select {
+        float: right;
+        margin-right: 10px;
+        width: 35%;
+        border-radius: $br;
+        border: 1px solid $medium-grey;
+        -webkit-appearance: none;
+        -webkit-border-radius: $br;
+        color: $dark-grey;
+        background-color: $light-grey;
+        padding: 4px;
+        font-size: 12px;
+        margin-top: 4px;
+      }
+      a {
+        float: right;
+        display: inline-block;
+        i {
+          background-color: white;
+          color: $grey;
+          border: 1px solid $grey;
+          border-radius: 50%;
+          padding: 2px 4px;
+          margin: 6px 15px 0 5px;
         }
       }
     }

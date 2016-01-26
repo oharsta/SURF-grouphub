@@ -1,0 +1,20 @@
+<div id="group_members_tab">
+  <%= partial :search_container %>
+  <ul class="users">
+    <% 25.times do |i| %>
+        <li>
+          <div>
+            <p>John Doe</p>
+            <span>john.doe@example.com</span>
+          </div>
+          <a href="#" class="rounded"><i class="fa fa-minus"></i></a>
+          <select name="roles" id="roles">
+            <option value="admin">Admin</option>
+            <option value="manager" selected>Member</option>
+            <option value="member">Manager</option>
+          </select>
+
+        </li>
+    <% end %>
+  </ul>
+</div>

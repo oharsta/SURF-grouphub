@@ -2,11 +2,12 @@
 title: SURF - Grouphub
 ---
 
-<%= partial "header" %>
-<%= partial "navigation" %>
+<%= partial :header %>
+<%= partial :navigation %>
 <%= partial "groups" %>
 <%= partial "footer" %>
 
 
 <%= partial "notifications" %>
+<%= partial("new_group", locals: {action: :new}) %>
 <%= partial("edit_group", locals: {action: :new}) %>
