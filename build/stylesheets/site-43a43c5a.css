@@ -461,45 +461,54 @@ body {
   overflow: hidden; }
 
 /* line 5, _modals.scss */
-.modal_container, .notifications_container, .edit_group_container {
+.modal_container, .notifications_container, .new_group_container, .edit_group_container {
   width: 100%;
   height: 100%;
   top: 0;
   position: absolute;
-  background-color: rgba(22, 22, 22, 0.7); }
+  background-color: rgba(22, 22, 22, 0.85); }
   @media screen and (max-width: 800px) {
     /* line 5, _modals.scss */
-    .modal_container, .notifications_container, .edit_group_container {
+    .modal_container, .notifications_container, .new_group_container, .edit_group_container {
       background-color: black; } }
 
 /* line 16, _modals.scss */
-.modal, .notifications_container div.notifications, .edit_group_container div.edit_group {
+.modal, .notifications_container div.notifications, .new_group_container div.new_group, .edit_group_container div.edit_group {
   position: relative;
   margin: 0 auto;
-  top: 10%;
-  width: 50%;
-  max-height: 80%;
   overflow-y: auto; }
   @media screen and (max-width: 800px) {
     /* line 16, _modals.scss */
-    .modal, .notifications_container div.notifications, .edit_group_container div.edit_group {
+    .modal, .notifications_container div.notifications, .new_group_container div.new_group, .edit_group_container div.edit_group {
       top: 0;
       width: 100%;
-      height: 100%; } }
-  /* line 30, _modals.scss */
-  .modal .modal_header, .notifications_container div.notifications .modal_header, .edit_group_container div.edit_group .modal_header, .notifications_container div.notifications header, .edit_group_container div.edit_group header {
+      max-height: 100%; } }
+  @media screen and (min-width: 800px) {
+    /* line 16, _modals.scss */
+    .modal, .notifications_container div.notifications, .new_group_container div.new_group, .edit_group_container div.edit_group {
+      top: 10%;
+      width: 600px;
+      max-height: 80%; } }
+  @media screen and (min-width: 1200px) {
+    /* line 16, _modals.scss */
+    .modal, .notifications_container div.notifications, .new_group_container div.new_group, .edit_group_container div.edit_group {
+      top: 10%;
+      width: 800px;
+      max-height: 80%; } }
+  /* line 37, _modals.scss */
+  .modal .modal_header, .notifications_container div.notifications .modal_header, .new_group_container div.new_group .modal_header, .edit_group_container div.edit_group .modal_header, .notifications_container div.notifications header, .new_group_container div.new_group header, .edit_group_container div.edit_group header {
     position: relative;
     background-color: #52b2cd;
     color: white;
     text-align: center;
     padding: 20px 0; }
-    /* line 37, _modals.scss */
-    .modal .modal_header p, .notifications_container div.notifications .modal_header p, .edit_group_container div.edit_group .modal_header p, .notifications_container div.notifications header p, .edit_group_container div.edit_group header p {
+    /* line 44, _modals.scss */
+    .modal .modal_header p, .notifications_container div.notifications .modal_header p, .new_group_container div.new_group .modal_header p, .edit_group_container div.edit_group .modal_header p, .notifications_container div.notifications header p, .new_group_container div.new_group header p, .edit_group_container div.edit_group header p {
       margin: 0;
       font-size: 26px; }
 
-/* line 45, _modals.scss */
-a.close_modal {
+/* line 52, _modals.scss */
+.close_modal {
   position: absolute;
   top: 15%;
   left: 5%;
@@ -507,56 +516,56 @@ a.close_modal {
   color: white; }
 
 /* line 2, _mixins.scss */
-header:after {
+header.header:after {
   content: "";
   display: table;
   clear: both; }
 /* line 4, _header.scss */
-header ul {
+header.header ul {
   list-style-type: none; }
 /* line 7, _header.scss */
-header li {
+header.header li {
   display: inline-block; }
 /* line 10, _header.scss */
-header a {
+header.header a {
   text-decoration: none; }
 /* line 13, _header.scss */
-header ul:first-child {
+header.header ul:first-child {
   float: left;
   font-size: 20px;
   font-weight: 700; }
   /* line 18, _header.scss */
-  header ul:first-child li:first-child {
+  header.header ul:first-child li:first-child {
     border-right: solid 1px #a6a6a6;
     padding-right: 10px; }
     /* line 19, _header.scss */
-    header ul:first-child li:first-child a {
+    header.header ul:first-child li:first-child a {
       color: #a6a6a6; }
   /* line 25, _header.scss */
-  header ul:first-child li:last-child {
+  header.header ul:first-child li:last-child {
     padding-left: 10px; }
     /* line 26, _header.scss */
-    header ul:first-child li:last-child a {
+    header.header ul:first-child li:last-child a {
       color: #52b2cd; }
 /* line 33, _header.scss */
-header ul:last-child {
+header.header ul:last-child {
   float: right; }
   /* line 35, _header.scss */
-  header ul:last-child li:last-child {
+  header.header ul:last-child li:last-child {
     margin-right: 5px; }
     /* line 37, _header.scss */
-    header ul:last-child li:last-child a {
+    header.header ul:last-child li:last-child a {
       padding-right: 22px; }
     /* line 40, _header.scss */
-    header ul:last-child li:last-child i {
+    header.header ul:last-child li:last-child i {
       position: absolute;
       left: 38px;
       top: 7px; }
 /* line 48, _header.scss */
-header li.language-selector {
+header.header li.language-selector {
   position: relative; }
   /* line 50, _header.scss */
-  header li.language-selector a:last-child {
+  header.header li.language-selector a:last-child {
     position: absolute; }
 
 /* line 1, _navigation.scss */
@@ -888,23 +897,23 @@ footer {
 .notification a {
   margin: 15px 10px 5px 0px; }
 
-/* line 4, _edit_group.scss */
-.edit_group_container div.edit_group {
+/* line 4, _new_group.scss */
+.new_group_container div.new_group {
   background-color: #eaeaea; }
-  /* line 12, _edit_group.scss */
-  .edit_group_container div.edit_group form {
+  /* line 12, _new_group.scss */
+  .new_group_container div.new_group form {
     padding: 20px 30px;
     border-radius: 2px; }
-    /* line 16, _edit_group.scss */
-    .edit_group_container div.edit_group form .form_element {
+    /* line 16, _new_group.scss */
+    .new_group_container div.new_group form .form_element {
       padding: 10px; }
-    /* line 20, _edit_group.scss */
-    .edit_group_container div.edit_group form label {
+    /* line 20, _new_group.scss */
+    .new_group_container div.new_group form label {
       color: #555555;
       min-width: 90px;
       display: inline-block; }
-    /* line 26, _edit_group.scss */
-    .edit_group_container div.edit_group form input, .edit_group_container div.edit_group form textarea, .edit_group_container div.edit_group form select {
+    /* line 26, _new_group.scss */
+    .new_group_container div.new_group form input, .new_group_container div.new_group form textarea, .new_group_container div.new_group form select {
       width: 80%;
       display: inline-block;
       border-radius: 2px;
@@ -914,15 +923,202 @@ footer {
       -webkit-appearance: none;
       -webkit-border-radius: 2px; }
       @media screen and (max-width: 800px) {
-        /* line 26, _edit_group.scss */
-        .edit_group_container div.edit_group form input, .edit_group_container div.edit_group form textarea, .edit_group_container div.edit_group form select {
+        /* line 26, _new_group.scss */
+        .new_group_container div.new_group form input, .new_group_container div.new_group form textarea, .new_group_container div.new_group form select {
           width: 100%; } }
-    /* line 41, _edit_group.scss */
-    .edit_group_container div.edit_group form input, .edit_group_container div.edit_group form select {
+    /* line 41, _new_group.scss */
+    .new_group_container div.new_group form input, .new_group_container div.new_group form select {
       height: 26px; }
-    /* line 44, _edit_group.scss */
-    .edit_group_container div.edit_group form a {
+    /* line 44, _new_group.scss */
+    .new_group_container div.new_group form a {
       margin: 30px 10px 5px 105px; }
-      /* line 47, _edit_group.scss */
-      .edit_group_container div.edit_group form a.button_dark_grey {
+      /* line 47, _new_group.scss */
+      .new_group_container div.new_group form a.button_dark_grey {
         margin-left: 0; }
+
+/* line 1, _edit_group.scss */
+.edit_group_container {
+  overflow-x: hidden;
+  /* DAMN YOU DENNIS */ }
+  /* line 5, _edit_group.scss */
+  .edit_group_container ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+  /* line 9, _edit_group.scss */
+  .edit_group_container ::-webkit-scrollbar-thumb {
+    background: transparent; }
+  /* line 15, _edit_group.scss */
+  .edit_group_container div.edit_group {
+    overflow-y: hidden;
+    background-color: transparent; }
+    /* line 23, _edit_group.scss */
+    .edit_group_container div.edit_group header i {
+      position: absolute;
+      top: 47%;
+      right: 10px; }
+    /* line 28, _edit_group.scss */
+    .edit_group_container div.edit_group header a.close_modal {
+      top: 28%;
+      left: 10%; }
+    /* line 33, _edit_group.scss */
+    .edit_group_container div.edit_group .left {
+      background-color: #eaeaea; }
+      @media screen and (max-width: 800px) {
+        /* line 33, _edit_group.scss */
+        .edit_group_container div.edit_group .left {
+          width: 100%; } }
+      @media screen and (min-width: 800px) {
+        /* line 33, _edit_group.scss */
+        .edit_group_container div.edit_group .left {
+          width: 565px; } }
+      @media screen and (min-width: 1200px) {
+        /* line 33, _edit_group.scss */
+        .edit_group_container div.edit_group .left {
+          width: 765px; } }
+  /* line 47, _edit_group.scss */
+  .edit_group_container ul.icons {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    list-style-type: none;
+    position: absolute;
+    z-index: 999; }
+    @media screen and (max-width: 800px) {
+      /* line 47, _edit_group.scss */
+      .edit_group_container ul.icons {
+        top: 0;
+        right: 0; } }
+    @media screen and (min-width: 800px) {
+      /* line 47, _edit_group.scss */
+      .edit_group_container ul.icons {
+        top: 0;
+        right: 0; } }
+    /* line 64, _edit_group.scss */
+    .edit_group_container ul.icons li {
+      background-color: #5c8da7;
+      margin-bottom: 2px; }
+      /* line 67, _edit_group.scss */
+      .edit_group_container ul.icons li:last-child {
+        border: none; }
+      /* line 71, _edit_group.scss */
+      .edit_group_container ul.icons li a i {
+        color: #eaeaea;
+        padding: 8px;
+        font-size: 16px; }
+  /* line 80, _edit_group.scss */
+  .edit_group_container ul.tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    /* line 2, _mixins.scss */
+    .edit_group_container ul.tabs:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 87, _edit_group.scss */
+    .edit_group_container ul.tabs li {
+      text-align: center;
+      width: 50%;
+      padding: 10px; }
+      /* line 91, _edit_group.scss */
+      .edit_group_container ul.tabs li a {
+        text-decoration: none; }
+      /* line 95, _edit_group.scss */
+      .edit_group_container ul.tabs li:first-child {
+        float: left;
+        background-color: white;
+        border-bottom: 0.5px solid #52b2cd; }
+        /* line 99, _edit_group.scss */
+        .edit_group_container ul.tabs li:first-child a {
+          color: #52b2cd; }
+      /* line 103, _edit_group.scss */
+      .edit_group_container ul.tabs li:last-child {
+        float: right;
+        background-color: #5c8da7; }
+        /* line 106, _edit_group.scss */
+        .edit_group_container ul.tabs li:last-child a {
+          color: white; }
+        /* line 109, _edit_group.scss */
+        .edit_group_container ul.tabs li:last-child i {
+          background-color: white;
+          color: #52b2cd;
+          border-radius: 50%;
+          padding: 2px 3px;
+          margin-right: 10px; }
+  /* line 120, _edit_group.scss */
+  .edit_group_container .search_container {
+    border-bottom: 3px solid #eaeaea; }
+    /* line 123, _edit_group.scss */
+    .edit_group_container .search_container .input_container {
+      position: relative;
+      width: 100%;
+      padding: 15px;
+      background-color: white; }
+      /* line 128, _edit_group.scss */
+      .edit_group_container .search_container .input_container i {
+        position: absolute;
+        font-size: 20px;
+        top: 19px;
+        left: 23px;
+        color: #52b2cd; }
+      /* line 135, _edit_group.scss */
+      .edit_group_container .search_container .input_container input {
+        display: inline-block;
+        padding: 4px 4px 4px 30px;
+        width: 100%;
+        border-radius: 2px;
+        border: 1px solid #eaeaea;
+        background-color: #eaeaea;
+        color: #555555; }
+        /* line 143, _edit_group.scss */
+        .edit_group_container .search_container .input_container input:focus {
+          outline: none; }
+  /* line 150, _edit_group.scss */
+  .edit_group_container ul.users {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-y: auto;
+    max-height: 600px; }
+    /* line 158, _edit_group.scss */
+    .edit_group_container ul.users li {
+      padding: 10px 0px 10px 20px;
+      border-bottom: 1px solid #eaeaea; }
+      /* line 161, _edit_group.scss */
+      .edit_group_container ul.users li div {
+        display: inline-block; }
+      /* line 165, _edit_group.scss */
+      .edit_group_container ul.users li p {
+        margin: 0;
+        padding: 0; }
+      /* line 169, _edit_group.scss */
+      .edit_group_container ul.users li span {
+        color: #8a8a8a;
+        font-size: 13px; }
+      /* line 173, _edit_group.scss */
+      .edit_group_container ul.users li select {
+        float: right;
+        margin-right: 10px;
+        width: 35%;
+        border-radius: 2px;
+        border: 1px solid #bbbbbb;
+        -webkit-appearance: none;
+        -webkit-border-radius: 2px;
+        color: #555555;
+        background-color: #eaeaea;
+        padding: 4px;
+        font-size: 12px;
+        margin-top: 4px; }
+      /* line 187, _edit_group.scss */
+      .edit_group_container ul.users li a {
+        float: right;
+        display: inline-block; }
+        /* line 190, _edit_group.scss */
+        .edit_group_container ul.users li a i {
+          background-color: white;
+          color: #a6a6a6;
+          border: 1px solid #a6a6a6;
+          border-radius: 50%;
+          padding: 2px 4px;
+          margin: 6px 15px 0 5px; }

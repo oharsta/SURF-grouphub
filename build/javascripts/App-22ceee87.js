@@ -62,15 +62,18 @@ class App {
   }
 
   modals() {
-    let toggleModal = (id, e) => {
-      this.stop(e);
+    let toggleModal = (e, id) => {
+      this.toggleHidden(e, id);
       document.querySelector('body').classList.toggle('modal-open');
-      document.querySelector(id).classList.toggle('hidden');
     };
-    ['notifications', 'edit_group'].forEach((s) => {
-      document.querySelector('#' + s + '_link').addEventListener('click', (e) => toggleModal('#' + s, e));
-      document.querySelector('#' + s + '_close').addEventListener('click', (e) => toggleModal('#' + s, e));
-    })
+    ['notifications', 'new_group'].forEach((s) => {
+      document.querySelector('#' + s + '_link').addEventListener('click', (e) => toggleModal(e, '#' + s));
+      document.querySelector('#' + s + '_close').addEventListener('click', (e) => toggleModal(e, '#' + s));
+    });
+
+    let editLinks = Array.from(document.querySelectorAll('.button_edit'));
+    editLinks.forEach((link) => link.addEventListener('click', (e) => toggleModal(e,'#edit_group')));
+    document.querySelector('#edit_group_close').addEventListener('click', (e) => toggleModal(e, '#edit_group'));
   }
 
   languageSelector() {
