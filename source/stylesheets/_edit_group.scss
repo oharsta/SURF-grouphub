@@ -52,6 +52,7 @@
     position: absolute;
 
     z-index: 999;
+    /* todo rework - not responsive */
     @media screen and (max-width: $medium) {
       top: 0;
       right: 0;
