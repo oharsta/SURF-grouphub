@@ -81,6 +81,10 @@ class App {
     let joinLinks = Array.from(document.querySelectorAll('.button_join'));
     joinLinks.forEach((link) => link.addEventListener('click', (e) => toggleModal(e, '#join_group')));
     document.querySelector('#join_group_close').addEventListener('click', (e) => toggleModal(e, '#join_group'));
+
+    let liEdits = Array.from(document.querySelectorAll('.group_section.edit'));
+    liEdits.forEach((link) => link.addEventListener('click', (e) => toggleModal(e, '#edit_group')));
+
   }
 
   editGroup() {

@@ -1,4 +1,4 @@
-<li class="group_section">
+<li class="<%= "group_section #{action}" %>">
   <div>
     <i class="<%= "fa fa-user #{type}" %>"></i>
     <span>12</span>
@@ -8,7 +8,11 @@
     <p>Temporibus autem quibusdam et aut.</p>
     <p>15 December 2015</p>
   </div>
-  <div>
-    <a class="<%= "button_#{action}" %>" href="#" data-hover="LEAVE"><span><%= I18n.t("action.#{action}") %></span></a>
-  </div>
+
+      <div>
+        <% if (action != :none  && action != :edit) %>
+          <a class="<%= "button_#{action} #{type}" %>" href="#" data-hover="LEAVE"><span><%= I18n.t("action.#{action}") %></span></a>
+        <% end %>
+      </div>
+
 </li>
