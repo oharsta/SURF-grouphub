@@ -1,7 +1,7 @@
 .new_group_container {
   @extend .modal_container;
 
-  div.new_group {
+  .new_group_modal {
     @extend .modal;
     background-color: $light-grey;
 
@@ -29,17 +29,17 @@
         border-radius: $br;
         border: 1px solid $medium-grey;
         background-color: white;
-        padding: 2px;
-        -webkit-appearance: none;
+        padding: 4px;
         -webkit-border-radius: $br;
-
+        box-shadow: 0px 1px 1px $grey;
         @media screen and (max-width: $medium) {
           width: 100%;
         }
       }
 
       input, select {
-        height: 26px;
+        height: 34px;
+        line-height: 26px;
       }
       a {
         margin: 30px 10px 5px 105px;

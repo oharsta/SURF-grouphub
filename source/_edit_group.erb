@@ -3,16 +3,26 @@
   <div class="edit_group">
     <div class="left">
       <header>
-        <a id="edit_group_close" href="#" class="close_modal"><i class="fa fa-times"></i></a>
-        <p>Data Management Landscape</p>
-        <i class="fa fa-angle-double-down"></i>
-        <div class="hidden">Libraries and the Research Data Management Landscape of library and science, as well as
-          influence and participate in national policy
+        <div>
+          <a id="edit_group_close" href="#" class="close_modal"><i class="fa fa-times"></i></a>
+          <p id="group_title">Data Management Landscape</p>
+          <input id="edit_group_title" class="hidden" value="Data Management Landscape">
+          <a id="show_group_details" class="show_details" href="#"><i class="fa fa-angle-double-down"></i></a>
         </div>
+        <div id="group_details" class="hidden details">Libraries and the Research Data Management Landscape of library and science, as well as influence and participate in national policy. More details depending on the details of the group.
+        </div>
+        <div id="edit_group_details" class="hidden details">
+          <textarea name="group_details" rows="5">
+            Libraries and the Research Data Management Landscape of library and
+          science, as well as
+          influence and participate in national policy. More details depending on the details of the group.
+          </textarea>
+        </div>
+        <%= partial "group_deletion_confirmation" %>
       </header>
       <ul class="tabs">
         <li>
-          <a id="group_members" href="#">Group members</a>
+          <a id="group_members" href="#" class="active">Group members</a>
         </li>
         <li>
           <a id="add_members" href="#"><i class="rounded fa fa-plus"></i>Add members</a>
@@ -23,13 +33,13 @@
     </div>
     <ul class="icons right">
       <li>
-        <a id="edit_group" href="#"><i class="fa fa-edit"></i></a>
+        <a id="edit_group_link" href="#"><i class="fa fa-edit"></i></a>
       </li>
       <li>
-        <a id="download_group" href="#"><i class="fa fa-download"></i></a>
+        <a id="download_group_link" href="#"><i class="fa fa-download"></i></a>
       </li>
       <li>
-        <a id="delete_group" href="#"><i class="fa fa-trash"></i></a>
+        <a id="delete_group_link" href="#"><i class="fa fa-trash"></i></a>
       </li>
     </ul>
   </div>

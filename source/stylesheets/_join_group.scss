@@ -1,0 +1,41 @@
+.join_group_container {
+  @extend .modal_container;
+
+  .join_group_modal {
+    @extend .modal;
+    background-color: $light-grey;
+
+    header {
+      @extend .modal_header;
+    }
+
+    form {
+      padding: 20px 60px;
+      border-radius: $br;
+
+      .form_element {
+        padding: 10px;
+      }
+      span {
+        color: $dark-grey;
+      }
+      p {
+        margin: 0;
+        font-size: 26px;
+      }
+      label {
+        color: $dark-grey;
+        min-width: 90px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      textarea {
+        width: 100%;
+        min-height: 125px;
+      }
+      a.button_blue {
+        margin-left: 10px;
+      }
+    }
+  }
+}

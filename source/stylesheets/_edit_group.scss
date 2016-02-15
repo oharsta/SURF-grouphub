@@ -10,8 +10,6 @@
     background: transparent;
   }
 
-  /* DAMN YOU DENNIS */
-
   div.edit_group {
     @extend .modal;
 
@@ -20,14 +18,49 @@
 
     header {
       @extend .modal_header;
-      i {
-        position: absolute;
-        top: 47%;
-        right: 10px;
-      }
       a.close_modal {
-        top: 28%;
-        left: 10%;
+        top: 13px;
+        left: 20px;
+      }
+      a.show_details {
+        position: absolute;
+        color: white;
+        top: 30px;
+        right: 15px;
+      }
+      div.details {
+        padding: 5px 40px 0px 40px;
+        text-align: center;
+      }
+      @media screen and (max-width: $medium) {
+        min-height: 100px;
+        p {
+          font-size: 18px;
+        }
+      }
+      input, textarea {
+        width: 600px;
+        color: white;
+        text-align: center;
+        line-height: 28px;
+        background-color: darken($blue, 10%);
+        border: 1.5px solid darken($blue, 15%);
+        font-size: 22px;
+        padding: 10px;
+        @media screen and (max-width: $large) {
+          width: 400px;
+        }
+        @media screen and (max-width: $medium) {
+          width: 300px;
+        }
+        @media screen and (max-width: $small) {
+          width: 200px;
+        }
+      }
+      textarea {
+        font-size: 14px;
+        line-height: 14px;
+        overflow-y: scroll;
       }
     }
     .left {
@@ -65,8 +98,19 @@
     li {
       background-color: $medium-blue;
       margin-bottom: 2px;
+      &:hover {
+        background-color: darken($medium-blue, 10%);
+      }
+      &:first-child {
+        &:hover {
+          background-color: $green;
+        }
+      }
       &:last-child {
         border: none;
+        &:hover {
+          background-color: $red;
+        }
       }
       a {
         i {
@@ -74,7 +118,6 @@
           padding: 8px;
           font-size: 16px;
         }
-
       }
     }
   }
@@ -88,25 +131,14 @@
     li {
       text-align: center;
       width: 50%;
-      padding: 10px;
       a {
+        padding: 10px;
         text-decoration: none;
-      }
-
-      &:first-child {
-        float: left;
-        background-color: white;
-        border-bottom: 0.5px solid $blue;
-        a {
-          color: $blue;
-        }
-      }
-      &:last-child {
-        float: right;
+        width: 100%;
+        display: inline-block;
         background-color: $medium-blue;
-        a {
-          color: white;
-        }
+        border-bottom: 0.5px solid $medium-blue;
+        color: white;
         i {
           background-color: white;
           color: $blue;
@@ -114,6 +146,24 @@
           padding: 2px 3px;
           margin-right: 10px;
         }
+
+        &.active {
+          background-color: white;
+          border-bottom: 0.5px solid lighten($blue, 30%);
+          color: $blue;
+          i {
+            background-color: $blue;
+            color: white;
+          }
+        }
+
+      }
+
+      &:first-child {
+        float: left;
+      }
+      &:last-child {
+        float: right;
       }
     }
   }
@@ -126,6 +176,7 @@
       width: 100%;
       padding: 15px;
       background-color: white;
+      border-bottom: 1px solid $medium-grey;
       i {
         position: absolute;
         font-size: 20px;
@@ -135,7 +186,7 @@
       }
       input {
         display: inline-block;
-        padding: 4px 4px 4px 30px;
+        padding: 4px 4px 4px 32px;
         width: 100%;
         border-radius: $br;
         border: 1px solid $light-grey;
@@ -154,18 +205,28 @@
     padding: 0;
     background-color: white;
     overflow-y: auto;
-    max-height: 600px;
+    max-height: 380px;
 
     li {
+
+      &.separator {
+        background-color: $blue;
+        color: white;
+        text-align: center;
+      }
+
       padding: 10px 0px 10px 20px;
       border-bottom: 1px solid $light-grey;
+      &:last-child {
+        margin-bottom: 20px;
+      }
       div {
         display: inline-block;
 
       }
       p {
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
       }
       span {
         color: #8a8a8a;
@@ -177,7 +238,6 @@
         width: 35%;
         border-radius: $br;
         border: 1px solid $medium-grey;
-        -webkit-appearance: none;
         -webkit-border-radius: $br;
         color: $dark-grey;
         background-color: $light-grey;
@@ -199,5 +259,31 @@
       }
     }
   }
+  #group_deletion_confirmation {
+    position: absolute;
+    width: 40%;
+    @media screen and (max-width: $medium) {
+      width: 60%;
+    }
+    height: 100px;
+    background-color: white;
+    right: 0px;
+    bottom: -92px;
+    z-index: 999;
+    box-shadow: -2px 2px 5px $darker-grey;
+    p {
+      color: $dark-grey;
+      font-size: 16px;
+      padding: 15px;
+    }
+    a.pull-left {
+      margin: 0 0 0 15px;
+      width: 42%;
+    }
+    a.pull-right {
+      margin: 0 15px 0 0;
+      width: 42%;
+    }
 
+  }
 }
