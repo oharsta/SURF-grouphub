@@ -1,18 +1,19 @@
 <div id="<%= "group_#{group}" %>" class="group <%= hidden ? 'hidden' : '' %>">
   <section class="<%= "background_#{type}" %>">
     <a id="<%= "close_#{group}" %>" href="#" class="close"><i class="fa fa-times"></i></a>
-    <div class="sort">
-      <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+    <div id="<%= "sort_menu_#{type}" %>" class="<%= "sort_#{type}" %>">
+      <span><i class="fa fa-sort-amount-asc"></i></span>
       <span>A-Z</span>
       <span class="sort_container">
-        <a id="<%= "sort_menu_#{type}" %>" href="#"><i class="fa fa-sort-down"></i></a>
+        <span ><i class="fa fa-sort-down"></i></span>
       </span>
     </div>
     <div id="<%= "sort_drop_down_#{type}" %>" class="<%= "hidden sort_drop_down_#{type}" %>">
       <ul>
-        <li><a href="#" class="active">Title</a></li>
-        <li><a href="#">Description</a></li>
-        <li><a href="#">Date</a></li>
+        <li><label for="<%= "name_up_#{type}" %>">A - Z</label><input type="radio" id="<%= "name_up_#{type}" %>" name="<%= "sort_#{type}" %>" checked></li>
+        <li><label for="<%= "name_down_#{type}" %>">Z - A</label><input type="radio" id="<%= "name_down_#{type}" %>" name="<%= "sort_#{type}" %>"></li>
+        <li><label for="<%= "date_up_#{type}" %>">Jan - Dec</label><input type="radio" id="<%= "date_up_#{type}" %>" name="<%= "sort_#{type}" %>"></li>
+        <li><label for="<%= "date_down_#{type}" %>">Dec - Jan</label><input type="radio" id="<%= "date_down_#{type}" %>" name="<%= "sort_#{type}" %>"></li>
       </ul>
     </div>
     <div>

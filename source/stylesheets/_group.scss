@@ -3,6 +3,15 @@
   background-color: white;
   border: 2px solid;
 
+  @media screen and (min-width: $large) {
+    overflow-y: scroll;
+    overflow: auto;
+
+    ul:last-child {
+      margin: 0 0 150px 0;
+    }
+  }
+
   h3, p {
     margin: 0;
     font-weight: 400;
@@ -27,7 +36,7 @@
       left: 6px;
       font-size: 16px;
     }
-    .sort {
+    .sort_blue {
       position: absolute;
       top: 3px;
       right: 3px;
@@ -35,6 +44,19 @@
       border-radius: $br;
       padding: 3px 16px 3px 4px;
       font-size: 12px;
+      cursor: pointer;
+    }
+    .sort_green {
+      @extend .sort_blue;
+      border: solid 1px $light-green;
+    }
+    .sort_purple {
+      @extend .sort_blue;
+      border: solid 1px $light-purple;
+    }
+    .sort_grey {
+      @extend .sort_blue;
+      border: solid 1px $medium-grey;
     }
     .sort_container {
       position: relative;
@@ -49,39 +71,41 @@
       text-align: right;
       top: 30px;
       right: 3px;
-      min-width: 80px;
+      min-width: 120px;
       border-radius: $br;
       border: solid 1px $light-grey;
-      background-color: darken($blue, 10);
-      padding: 3px;
+      background-color: white;
+      box-shadow: 0px 3px 5px $darker-grey;
+      color: $dark-grey;
       font-size: 12px;
       z-index: 999;
       ul {
         list-style-type: none;
-        a {
-          &:hover {
-            font-weight: bold;
+        margin-bottom: 2px;
+        li {
+          @include clearFix;
+          padding: 8px;
+          border-bottom: 1px solid $grey;
+          &:last-child {
+            border-bottom: none;
           }
-          &.active:before {
-            content: "*";
-            position: absolute;
-            top: 0;
-            left: 1px;
+          label {
+            float: left;
+          }
+          input {
+            float: right;
           }
         }
       }
     }
     .sort_drop_down_green {
       @extend .sort_drop_down_blue;
-      background-color: darken($green, 10);
     }
     .sort_drop_down_purple {
       @extend .sort_drop_down_blue;
-      background-color: darken($purple, 10);
     }
     .sort_drop_down_grey {
       @extend .sort_drop_down_blue;
-      background-color: darken($medium-grey, 10);
     }
   }
   section.owned {

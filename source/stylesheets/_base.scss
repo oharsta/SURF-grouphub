@@ -9,6 +9,11 @@ body {
   font-weight: 400;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
+
+  @media screen and (min-width: $large) {
+    overflow-y: hidden;
+  }
+
 }
 
 .background_purple {
@@ -16,7 +21,7 @@ body {
 }
 
 .background_grey {
-  background-color: $medium-grey;
+  background-color: $darker-grey;
 }
 
 .background_green {
