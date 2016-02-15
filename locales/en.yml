@@ -16,7 +16,7 @@ en:
     search_description: "Results for data"
   action:
     edit: "EDIT"
-    member: "MEMBER"
+    member: "LEAVE"
     leave: "LEAVE"
     join: "JOIN"
   group:

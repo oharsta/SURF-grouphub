@@ -57,12 +57,27 @@
       </ul>
   <% elsif group == :organisation_groups %>
       <ul>
-        <% 5.times do |i| %>
+        <% 2.times do |i| %>
             <%= partial(:group_section, locals: {group: group, type: type, action: :member}) %>
+        <% end %>
+        <% 2.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :none}) %>
         <% end %>
       </ul>
   <% else %>
       <ul>
+        <% 1.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :none}) %>
+        <% end %>
+        <% 1.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :member}) %>
+        <% end %>
+        <% 1.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :none}) %>
+        <% end %>
+        <% 1.times do |i| %>
+            <%= partial(:group_section, locals: {group: group, type: type, action: :member}) %>
+        <% end %>
         <% 30.times do |i| %>
             <%= partial(:group_section, locals: {group: group, type: type, action: :join}) %>
         <% end %>

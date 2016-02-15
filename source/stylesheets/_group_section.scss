@@ -3,6 +3,17 @@ li.group_section {
   border-bottom: solid 1px $light-grey;
   padding-bottom: 10px;
 
+  &.none {
+    background-color: lighten($light-grey, 5%);
+  }
+
+  &.edit {
+    &:hover {
+      background-color: lighten($light-blue, 10%);
+      cursor: pointer;
+    }
+  }
+
   div:first-child {
     margin-top: 15px;
     padding: 0 10px 12px 15px;
@@ -64,14 +75,16 @@ li.group_section {
         color: white;
       }
     }
+
     .button_member {
       @extend .button_edit;
 
-      color: white;
-      background-color: $green;
-      border: none;
+      color: $blue;
+      background-color: white;
+      border: 1px solid $blue;
 
       &:hover {
+        color: white;
         background: $red;
         span {
           display: none;
@@ -84,6 +97,31 @@ li.group_section {
           width: 100%;
         }
       }
+      &.purple {
+        color: $purple;
+        border: 1px solid $purple;
+
+        &:hover {
+          color: white;
+        }
+      }
+      &.green {
+        color: $green;
+        border: 1px solid $green;
+
+        &:hover {
+          color: white;
+        }
+      }
+      &.grey {
+        color: $grey;
+        border: 1px solid $grey;
+
+        &:hover {
+          color: white;
+        }
+      }
+
     }
     .button_join {
       @extend .button_edit;
@@ -93,6 +131,23 @@ li.group_section {
 
       &:hover {
         background: lighten($green, 25);
+      }
+
+      &.purple {
+        color: $purple;
+        border: 1px solid $purple;
+        &:hover {
+          color: white;
+          background: lighten($purple, 25);
+        }
+      }
+      &.grey {
+        color: $grey;
+        border: 1px solid $grey;
+        &:hover {
+          color: white;
+          background: lighten($grey, 25);
+        }
       }
     }
   }
